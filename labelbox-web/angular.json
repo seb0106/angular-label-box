@@ -127,5 +127,8 @@
       }
     }
   },
-  "defaultProject": "labelbox-web"
+  "defaultProject": "labelbox-web",
+  "cli": {
+    "analytics": false
+  }
 }
