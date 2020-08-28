@@ -2,7 +2,10 @@
   rel="stylesheet"
   href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css"
 />
-
+<link
+  href="https://fonts.googleapis.com/icon?family=Material+Icons"
+  rel="stylesheet"
+/>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
 <script src="https://api.labelbox.com/static/labeling-api.js"></script>
 <link rel="stylesheet" href="app.component.scss" />
@@ -22,20 +25,19 @@
 
     <div class="flex-grow"></div>
     <div style="display: flex;">
-      <button sbbButton
-        secondary
-        style=" width: 100%;"
+      <a
+        class="waves-effect waves-light btn-large"
+        style="background-color: white; color: black; width: 100%;"
         onclick="skip()"
-        >Skip</button
+        >Skip</a
       >
-      <button sbbButton
-      primary
-      style="width: 100%;"
-      onclick="submit()"
-      >Submit</button
-    >
+      <a
+        class="waves-effect waves-light btn-large"
+        style="background-color: #03a9f4; width: 100%;"
+        onclick="submit()"
+        >Submit</a
+      >
     </div>
-   
   </div>
 
   <div class="flex-grow flex-column content">
@@ -61,6 +63,7 @@
     <div id="asset">loading...</div>
   </div>
 </div>
+
 <script>
   let state = {
     projectId: new URL(window.location.href).searchParams.get("project"),
